@@ -102,7 +102,32 @@ def log_func():
 에 전달된다. 
 유효성 검사와 같은 것을 데코레이터로 해결할 수 있다. 도메인 로직과 기타 로직을 분리한다. 
 다양한 개수의 파라미터를 받으려면 
-*args, **kargs 를 써라. 
+*args, **kwargs 를 써라. 
+Method Decoator : 클래스의 메서드에도 데코레이터를 붙일 수 있다. 
+모든 파이썬 클래스의 메서드는 첫번째 인자가 self이기 때문에 데코레이터의 파라미터에도
+self 인자를 꼭 넣어줘야 한다. 
+'''
 
 '''
+python format 함수
+print('{} {}'.format(10,100))
+print('{aa} {bb}'.format(aa=10, b==20))
+'''
+
+'''
+데코레이터 자체에도 인자를 줄 수 있다. 중첩 단계를 하나 더 추가한다. 
+def decorator1(num):
+    def outer_wrapper(function):
+        def inner_wrapper(*args, **kwargs):
+            ...
+            return function(*args, **kwargs)
+            
+@decorator(1)으로 데코레이터를 붙일 수 있다.
+
+** 정리 : first class function과 closure function을 조합해서 만들었다.  
+'''
+
+
+
+
 
