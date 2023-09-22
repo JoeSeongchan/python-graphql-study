@@ -290,7 +290,16 @@ if not app.debug:
 에러 로그 파일은 Python을 실행한 위치에 저장이 된다. (꼭 명심할 것!)
 '''
 
-
+'''
+다양한 데코레이터
+- before_first_request : 웹 애플리케이션 기동 이후에 가장 처음에 들어오는
+HTTP 요청에서만 실행 
+- before_request : HTTP 요청이 들어올 때마다 실행 
+    before_first_request, before_request는 인자를 전달할 수 없다. 
+- after_request : HTTP 요청 처리가 끝나고 브라우저에 응답하기 전에 실행 
+    response를 인자로 받아서 다시 response를 리턴해야 한다. 
+Spring Framework의 AOP와 비슷하다. 
+'''
 
 
 
