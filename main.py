@@ -141,6 +141,35 @@ def get_first(username):
 def get_message(message_id):
     return "message id: %d" %message_id # 독특한 문법. format
 
+'''
+flask로 REST API 구현하기
+HTTP는 Connectionless한 프로토콜이다. 1회성 Request, Response
+TCP, IP socket을 이용해서 연결된다.
+ 
+- Http method | Path | Http 버전 -> Http Request Line 
+- Host | Connection -> Http Request Header
+    서버에 요청을 하고, 응답을 받는다. 1회성 연결을 한다. Request를 많이 할 때마다
+    연결을 계속 만들면 비효율적이다. 연결을 재사용할 수도 있다. 
+    Connection: keep-alive 로 연결을 재사용한다. 
+Request Line + Request Header = Header (택배의 송장 역할)
+ 
+Http Request Body
 
+Response 
+Http 버전 | Status Code | Status Message | Server-> Http Response Line
+Content-type | Content-length -> Http Response Header
+Http Response Body
+
+Http Method = 요청을 하는 방법
+요즘 대부분은 REST API 방식으로 데이터를 제공한다. 
+rest api는 http method를 쓴다. 
+create : 생성 (post)
+read : 조회 (get)
+update : 수정 (put)
+delete : 삭제 (delete)
+crud를 구현할 줄 알아야 한다. 기본적인 제한 사항을 알고 있어야 한다. 
+마이크로 서비스, OpenAPI (누구나 사용하도록 공개된 API) 에서 많이 사용된다. 
+REST = Representational State Transfer
+'''
 
 
