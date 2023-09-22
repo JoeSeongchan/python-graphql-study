@@ -212,6 +212,12 @@ def login():
 query string의 맨 처음에는 ?를 넣는다. 
 '''
 
+'''
+flask cors 지원 
+pip install flask_cors
+from flask_cors import CORS
+CORS(app)
 
+'''
 
 
