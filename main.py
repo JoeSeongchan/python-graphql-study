@@ -187,7 +187,31 @@ http -v GET http://localhost:8080/json_test
 flask의 jsonify 메서드에 Dict를 제공하면 자동으로 JSON으로 변환한다. 
 from flask import Flask, jsonify
 jsonify(Dict 객체)
-  
 '''
+
+'''
+파이썬 virtual env
+파이썬이 불안정했을 때, 각 라이브러리의 파이썬 버전별 호환성 이슈가 많았다. 
+안에서만 동작할 수 있도록 하는 가상 환경
+'''
+
+'''
+백엔드와 프론트엔드를 Flask로 개발
+Flask 안에서 파라미터를 가져오려면 request 객체를 써야 한다. 
+'''
+from flask import request,jsonify
+@app.route("/login")
+def login():
+    username = request.args.get("user_name")
+    if username == "dave":
+        return_data = {'auth':'success'}
+    else:
+        return_data = {'auth':'failed'}
+    return jsonify(return_data)
+'''
+query string의 맨 처음에는 ?를 넣는다. 
+'''
+
+
 
 
