@@ -239,6 +239,15 @@ make_response(jsonify(success=True), 200)
 make_response를 사용해서 status code를 지정하여 넣을 수 있다. 
 '''
 
+'''
+@app.route("/test", methods=["GET","POST","PUT","DELETE"])
+=> 라우팅 경로로 들어오는 method를 위와 같이 제한할 수 있다. 
+HTML에서는 put과 delete가 아예 지원이 안 됨 (form으로...)
+request.method로 요청의 HTTP METHOD를 확인할 수 있다. 
+post method의 데이터는 request.get_json()으로 가져온다.
+data = request.get_json()
+value = data["key"]
+'''
 
 
 
