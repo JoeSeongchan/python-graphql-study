@@ -218,6 +218,28 @@ pip install flask_cors
 from flask_cors import CORS
 CORS(app)
 
+CORS : Cross Origin Resource Sharing
+웹에서 사용하는 HTTP Request는 다른 웹 사이트의 자원을 요청할 수 있다. 
+태그로 이미지는 보여줄 수 있지만 스크립트 태그로 둘러싸인 스크립트 코드에서
+실행되는 HTTP request는 동일한 서버에만 할 수 있다. 
+정확히는 프로토콜, 호스트명, 포트가 동일해야 한다. Same Origin Policy라고 부른다. 
+CORS 메서드 : 전 요청 / 응답 헤더에 CORS 지원 헤더 정보를 넣는다. 
 '''
+
+'''
+make_response(jsonify(success=True), 200) 
+성공 여부만 표현해도 될 때, 이렇게 쓴다. 
+200 : 정상
+400 : 유효하지 않은 파라미터
+401 : 승인되지 않은 액세스. 401 vs 403
+403 : 액세스 금지
+404 : 리소스를 찾을 수 없음 
+500 : 내부 서버 오류
+
+make_response를 사용해서 status code를 지정하여 넣을 수 있다. 
+'''
+
+
+
 
 
