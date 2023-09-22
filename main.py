@@ -271,7 +271,25 @@ logging.debug("debug") 파이썬에서 어떤 로그를 남기기 위해서 이 
 보통 로깅은 파일에 남긴다. 
 에러가 발생하면 에러 로그를 우선 읽어라  
 이 로그 기능을 어떻게 Flask에 적용할 수 있을까? 
+
+logging 라이브러리와 함께 flask logging 기능 사용
+
+logging Handler 의 종류 :
+- FileHandler
+- RotatingFileHandler : 하나의 최대 파일 사이즈를 지정한다. 파일이 정해진 사이즈
+를 넘어가면 새로운 파일을 제공한다. 
+    전체 파일을 다 쓰면, 다시 처음부터 쓴다. 이 옵션을 쓰는 게 일상적이다. 
+app.run(...debug=...) -> 상용 프로그램에는 debug 값을 False로 설정한다. 
+debug 값이 False이면 Production 환경이라고 콘솔 창에 뜬다. 
+if not app.debug: 
+    import logging
+    from logging.handlers import RotatingFileHandler 
+    # 이런 식으로 코드를 많이 작성한다. 디버깅 과정에서는 로그가 많이 필요하지 않기 때문
+    ( 정말일까? )
+
+에러 로그 파일은 Python을 실행한 위치에 저장이 된다. (꼭 명심할 것!)
 '''
+
 
 
 
