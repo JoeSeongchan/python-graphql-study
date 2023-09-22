@@ -77,3 +77,32 @@ First-class function과 Closure 호출에 대한 개념을 이해해야 한다.
 
 데코레이터 문법 : 일급 함수 + 클로저 함수 
 '''
+
+'''
+파이썬 데코레이터
+First class Function과 Closure Function을 조합해서 구현
+함수 앞 뒤에 기능을 추가해서 손쉽게 함수를 활용할 수 있는 기법
+Spring의 AOP와 같은 기능. 
+'''
+
+# def datetime_decorator(func):
+#     def wrapper():
+#         print('time '+str(datatime.datetime.now()))
+#         func()
+#         print('exit')
+#     return wrapper;
+
+'''
+한번에 데코레이터로 작성할 수 있다.
+@outer_func
+def log_func():
+    print()
+
+데코레이터가 붙은 함수의 파라미터가 outer_function 안에 있는 inner_function
+에 전달된다. 
+유효성 검사와 같은 것을 데코레이터로 해결할 수 있다. 도메인 로직과 기타 로직을 분리한다. 
+다양한 개수의 파라미터를 받으려면 
+*args, **kargs 를 써라. 
+
+'''
+
