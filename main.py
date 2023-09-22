@@ -172,4 +172,22 @@ crud를 구현할 줄 알아야 한다. 기본적인 제한 사항을 알고 있
 REST = Representational State Transfer
 '''
 
+'''
+특정한 URI를 요청하면 JSON 형식으로 데이터를 반환하도록 만든다. 
+Flask에서는 dict(사전) 데이터를 응답 데이터로 만들고, 이를 jsonify()
+메소드를 활용해서 JSON 응답 데이터로 만들 수 있다. json은 RESTAPI와 뗄레야
+뗄 수 없다. httpie 설치해서 REST API 테스트해보자
+예전에는 Postman을 많이 썼다. 요즘에는 이런 간단한 Tool을 쓴다.
+pip install --upgrade httpie
+
+http GET http://localhost:8080/json_test
+
+http -v GET http://localhost:8080/json_test 
+ => 요청 헤더까지 같이 볼 수 있다. `-v` 옵션
+flask의 jsonify 메서드에 Dict를 제공하면 자동으로 JSON으로 변환한다. 
+from flask import Flask, jsonify
+jsonify(Dict 객체)
+  
+'''
+
 
