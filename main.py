@@ -249,6 +249,31 @@ data = request.get_json()
 value = data["key"]
 '''
 
+'''
+Flask에서 오류를 처리하기
+@app.errorhandler(404)
+def page_not_found(error):
+    return "<h1>404 Error</h1>", 404 # 이런 식으로 에러 코드를 보내줄 수 있다.
+
+
+Flask에서 Logging 다루기
+서버는 24시간 동작하므로, 문제가 있을 때 어떤 문제가 있는지 기록해두어야 한다.
+사용자 모니터링, 해킹 확인 등 다양한 상용화시 문제에 대해 로깅한다.
+Logging 라이브러리가 있다. 로깅 레벨이 있다. 
+DEBUG > INFO > WARNING > ERROR > Critical 
+심각한 문제를 일으킬 수 있는 부분에는 ERROR, Critical을 설정한다. 
+
+import logging
+logging.basicConfig(filename="test.log", level=logging.DEBUG)
+
+logging.debug("debug") 파이썬에서 어떤 로그를 남기기 위해서 이 라이브러리를 
+사용한다.
+보통 로깅은 파일에 남긴다. 
+에러가 발생하면 에러 로그를 우선 읽어라  
+이 로그 기능을 어떻게 Flask에 적용할 수 있을까? 
+'''
+
+
 
 
 
