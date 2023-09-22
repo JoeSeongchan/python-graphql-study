@@ -301,6 +301,26 @@ HTTP 요청에서만 실행
 Spring Framework의 AOP와 비슷하다. 
 '''
 
+'''
+flask 자체만으로 백엔드, 프론트엔드를 다 서빙할 수 있다. 
+지금까지는 하나의 파일에 모든 라우터를 넣었다. 
+blueprint를 사용하자. blueprint = 여러 소스 파일에 flask 코드를 작성할 수 
+있도록 하는 기능
+
+from 하위 폴더 import 'python 파일'
+app.register_blueprint(하위 폴더 소스파일명.블루프린트객체이름,url_prefix='/blog')
+-> 블루 프린트를 등록하는 방법
+
+from flask import Blueprint
+blog_abtest = Blueprint('blog',__name__)
+@blog_abtest.route('/blog1')
+def blog():
+    return "blue..."
+
+main 플래스크 서버에 blueprint를 등록한다. 이렇게 MVC 패턴을 쓸 수 있다. 
+
+
+'''
 
 
 
