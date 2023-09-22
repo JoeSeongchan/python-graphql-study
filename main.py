@@ -127,6 +127,19 @@ def decorator1(num):
 ** 정리 : first class function과 closure function을 조합해서 만들었다.  
 '''
 
+@app.route("/")
+def hello1():
+    return "<h1>Hello World! 1</h1>"
+
+# path variable
+@app.route("/first/<username>")
+def get_first(username):
+    return "<h3>Hello "+username+"</h3>"
+
+# data 타입 지정 가능
+@app.route("/message/<int:message_id>")
+def get_message(message_id):
+    return "message id: %d" %message_id # 독특한 문법. format
 
 
 
