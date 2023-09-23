@@ -318,8 +318,26 @@ def blog():
     return "blue..."
 
 main 플래스크 서버에 blueprint를 등록한다. 이렇게 MVC 패턴을 쓸 수 있다. 
+'''
 
+'''
+로깅 정보는 NoSQL에 저장한다. 
+SQLAlchemy, pymysql를 사용해서 DB에 접근한다.
+SQLAlchemy는 객체로 데이터를 저장한다.  
+'''
 
+'''
+파이썬의 객체지향
+class와 상속
+class Rect:
+    pass
+dir(SingleWord) : 객체의 클래스가 담고 있는 속성, 메서드 알아내기
+클래스명은 첫글자를 대문자로 한다. 클래스명이 아닌 것은 소문자 with 언더바로 
+이름을 붙인다. 
+def __init__(self,...):
+    xxx
+indentation 유의! 파이썬 method는 항상 첫번째 파라미터로 self를 가진다. 
+프로퍼티에는 self로 접근한다. 
 '''
 
 
