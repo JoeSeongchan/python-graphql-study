@@ -366,8 +366,16 @@ class method와 static method는 어떤 차이가 있는가?
     클래스 메서드의 범위는 그 클래스 안으로 제한된다. 
     Figure, Circle의 예로 이해할 수 있다. 
 static method는 별개의 함수라고 생각하면 편하다. 
+'''
 
- 
+
+'''
+GraphQL Client 프로그래밍
+Apollo Client 문서 참고
+Apollo Client 설치
+gql 작성
+공통되는 것들을 Fragment로 분리할 수 있다. 
+
 '''
 
 
