@@ -343,5 +343,31 @@ super()
 ex) super().work()
 '''
 
+'''
+클래스 속성(변수), 인스턴스 속성(변수)
+클래스 변수는 생성자 바깥에서 변수를 선언한다.
+def Figure:
+    count = 0
+클래스 속성은 클래스명.xxx으로 사용한다. 
+
+instance method, static method, class method
+instance method: 해당 객체 안에서 호출
+static method: <객체와 독립적이지만 로직상 클래스 내에 포함되는 메서드>
+    self 파라미터를 갖고 있지 않음 
+    객체 속성에 접근 불가
+    정적 메서드는 메서드 앞에 @staticmethod라는 Decorator 넣어야 함
+    클래스명.정적메서드명 또는 객체명.정적메서드명으로 호출 가능하다.
+    클래스 attribute에는 접근할 수 있다.  
+class method
+    self 파라미터 대신, cls 파라미터를 가진다.
+    클래스 변수 접근 가능하며 cls.클래스변수명으로 액세스할 수 있다.
+    클래스 메서드는 메서드 앞에 @classmethod라는 Decorator를 붙여야 한다. 
+class method와 static method는 어떤 차이가 있는가?
+    클래스 메서드의 범위는 그 클래스 안으로 제한된다. 
+    Figure, Circle의 예로 이해할 수 있다. 
+static method는 별개의 함수라고 생각하면 편하다. 
+
+ 
+'''
 
 
