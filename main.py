@@ -338,6 +338,9 @@ def __init__(self,...):
     xxx
 indentation 유의! 파이썬 method는 항상 첫번째 파라미터로 self를 가진다. 
 프로퍼티에는 self로 접근한다. 
+super() 
+자식 클래스에서 부모 클래스의 method를 호출할 때 사용한다. 
+ex) super().work()
 '''
 
 
